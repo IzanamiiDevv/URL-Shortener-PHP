@@ -1,0 +1,33 @@
+body{
+    margin: 0%;
+  }
+  #heading{
+    text-align: center;
+    background-color: green;
+    margin-top: 0;
+    padding: 20px;
+  }
+  input{
+    height: 40px;
+    margin-top: 80px;
+  }
+  #input-result{
+    width: 250px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px 40px;
+    text-align: center;
+    background-color: lightgray;
+  }
+  #sa{
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+  button{
+    margin-top: 5px;
+    margin-left: 82px;
+  }
+  footer{
+    margin-top: 90%;
+    margin-left: 100px;
+  }
