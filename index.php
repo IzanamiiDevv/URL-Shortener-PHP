@@ -20,8 +20,17 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, "cookie.txt");
 curl_setopt($ch, CURLOPT_COOKIEFILE, "cookie.txt");
 $result = curl_exec($ch);
 
-$link = explode('"', explode('{"success":"', $result)[1])[0];
-$fixed_link = str_replace("\/", "/", $link);
+// Check if the response contains the expected substring
+if (strpos($result, '{"success":"') !== false) {
+    // Extract the link
+    $link = explode('"', explode('{"success":"', $result)[1])[0];
+    $fixed_link = str_replace("\/", "/", $link);
+} else {
+    // Handle the case where the response doesn't contain the expected substring
+    // For example, you could set $fixed_link to some default value or display an error message
+    $fixed_link = "Error: Unexpected response from the URL shortening service";
+}
+
 }
 ?>
 <!DOCTYPE html>
